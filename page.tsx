@@ -1,25 +1,31 @@
-import styles from '../page.module.css';
-import Image from 'next/image';
-export default function sites()
+import Navbar from "../navbar/page";
+
+export default function Header()
 {
     return(
         <div>
-            <div className="sitesBg ">
-                <section className={styles.siteBg}>
-                    <div className="text-4xl text-white">
-                        One stop Home Destinaations!!
-                    </div>
-                </section>
-            </div>
-
-            <div className='p-20'>
-                <div className='grid lg:grid-cols-4 gap-4 sm:grid-cols-2'>
-                    <div className="relative w-72 h-96 "><Image src="/sites_images/pool3.jpg" alt='not'  layout="fill"/></div>
-                    <div ><Image src="/sites_images/apartment3.jpg" width={300}height={1} alt='not' /></div>
-                    <div><Image src="/sites_images/balcony.jpg" width={300} height={250} alt='not' /></div>
-                    <div><Image src="/sites_images/apartment2.jpg" width={300} height={250} alt='not' /></div>  
-                </div>
-            </div>
+            {/* <h1>Header page</h1> */}
+            <Navbar />
         </div>
     )
 }
+
+
+// export default async function Page() {
+//     const file = await fs.readFile(process.cwd() + '/components/Featured.json', 'utf8');
+//     console.log(process.cwd());
+//     const data = JSON.parse(file);
+        //   <div className='flex gap-10'>
+        //     {data.map(item=>{
+        //       return(
+        //         <div key={item.id}>
+        //           <h1>{item.name}</h1>
+        //           <img src={item.url} alt='not found'/>
+        //           <h3>{item.cost}</h3>
+        //         </div>
+        //         //<div key={item.id}>{item.name}</div>
+        //       )
+        //     })}
+        //   </div>
+//   }
+  
